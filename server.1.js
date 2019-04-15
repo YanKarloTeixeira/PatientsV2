@@ -6,7 +6,8 @@ const flash = require('connect-flash');
 const mongoose = require('mongoose');
 const passport = require('passport');
 const session = require('express-session');
-var cors = require('cors')
+
+var cors = require('cors');
 var indexRouter = require('./routes/index');
 var nursesRouter = require('./routes/nurses');
 var patientRouter = require('./routes/patients');
@@ -14,9 +15,11 @@ var apiRouter = require('./routes/api');
 var alertRouter = require('./routes/alert');
 const exphbs = require('express-handlebars');
 
+
 var app = express();
 
-var url = 'mongodb://romk444:jinlian123@comp-308-romk-shard-00-00-ix2wh.gcp.mongodb.net:27017,comp-308-romk-shard-00-01-ix2wh.gcp.mongodb.net:27017,comp-308-romk-shard-00-02-ix2wh.gcp.mongodb.net:27017/test?ssl=true&replicaSet=comp-308-romk-shard-0&authSource=admin&retryWrites=true'
+
+var url = 'mongodb://romk444:jinlian123@comp-308-romk-shard-00-00-ix2wh.gcp.mongodb.net:27017,comp-308-romk-shard-00-01-ix2wh.gcp.mongodb.net:27017,comp-308-romk-shard-00-02-ix2wh.gcp.mongodb.net:27017/test?ssl=true&replicaSet=comp-308-romk-shard-0&authSource=admin&retryWrites=true';
 //MongoDb database connection
 mongoose.connect(url,{useNewUrlParser:true}).then(db=>{
     console.log('connected');
@@ -52,6 +55,7 @@ app.use((req,res,next)=>{
 });
 const {equal}  = require('./helpers/handlebars-helper');
 // view engine setup
+
 app.engine('hbs',exphbs({defaultLayout: 'home',
     partialsDir: path.join(__dirname, 'views/Partials'),
     layoutsDir: path.join(__dirname, 'views/Layouts'),

@@ -14,6 +14,8 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 // const mongoose = require('mongoose');
 var cors = require('cors')
+
+var __dirname = ''
 // var indexRouter = require('../app/routes/index.server.router');
 // var indexRouter = require('../app/routers/index.server.routers');
 // var nursesRouter = require('../app/routers/nurse.server.routers');
@@ -53,8 +55,8 @@ module.exports = function () {
 	}));
 
 	// Set the application view engine and 'views' folder
-	app.set('views', './app/views');
-	app.set('view engine', 'ejs');
+	// app.set('views', '../views');
+	// app.set('view engine', 'hbs');
 
 	// Configure the flash messages middleware
 	app.use(flash());
@@ -82,7 +84,7 @@ module.exports = function () {
 
 	// Configure static file serving
 
-	app.use(express.static('./public'));
+	app.use(express.static('../public'));
 
 	// const { equal } = require('./helpers/handlebars-helper');
 	const { equal } = require('../helpers/handlebars-helper');
