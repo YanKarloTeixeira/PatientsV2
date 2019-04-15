@@ -1,0 +1,42 @@
+<div class="container"  ng-controller="patientController">
+    <div class="card-columns">
+        <div class="card" style="width:300px">
+            <div class="card-header" align="center">Actions</div>
+            <div class="card-body">
+                <a href="/alert/send/{{user.id}}" class="card-link">View Alerts</a><br><br>
+                <a href="/patient/{{user.id}}" class="card-link">Back</a>
+            </div>
+        </div>
+        <div class="card offset-sm-2" style="width:500px">
+            <div class="card-header">Add Alert Details </div>
+            <div class="card-body">
+                <form method="post" action="/alert/send/{{user.id}}">
+
+                    <div class="form-group">
+                        <label for="subject" > Subject: </label>
+                        <input type="text" id="subject" class="form-control" name="subject">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bp" > Blood Presure: </label>
+                        <input type="text" id="bp" class="form-control" name="bp">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="temp"> Body Temperature </label>
+                        <input type="text" id="temp" class="form-control" name="temp">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="desc"> Description </label>
+                        <textarea type="text" id="desc" class="form-control" name="desc">
+
+                        </textarea>
+                    </div>
+
+                    <input type="submit" class="btn btn-primary" value="Send">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

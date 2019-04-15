@@ -1,0 +1,22 @@
+
+.body-heading{
+  margin-top: 50px;
+}
+.table-row{
+  cursor:pointer;
+}
+.wrapper {
+  margin: 20px 0;
+  min-height: 440px;
+}
+.label-style{
+  font-family: "Arial Black";
+  padding: 15px;
+}
+
+.delete-link{
+  text-decoration: none;
+}
+a {
+  color: #00B7FF;
+}

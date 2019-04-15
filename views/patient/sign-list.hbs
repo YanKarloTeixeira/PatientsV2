@@ -1,0 +1,29 @@
+<div class="container" ng-controller="patientController">
+
+    <h2 align="center">
+        Vital Sign List
+    </h2>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Blood pressure</th>
+            <th scope="col">Heart Rate</th>
+            <th scope="col">Body Temperature</th>
+            <th scope="col">Respiratory rate</th>
+            <th scope="col">Time</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{#each visits}}
+        <tr  class="table-row">
+            <td>{{ blood_pressure }}</td>
+            <td>{{ heart_rate }}</td>
+            <td>{{ body_temperature }}</td>
+            <td>{{ respiratory_rate }}</td>
+            <td>{{ time }}</td>
+        </tr>
+        {{/each}}
+        </tbody>
+    </table>
+
+</div>

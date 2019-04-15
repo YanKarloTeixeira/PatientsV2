@@ -1,0 +1,23 @@
+<div class="container" ng-controller="myCtrl">
+    <h2 align="center">
+        Patients List
+    </h2>
+    <input type="text" class="form-control" placeholder="Enter Search Criteria" ng-model="search">
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Username</th>
+            <th scope="col">Email</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="x in patients | orderBy:'name'| filter:search:false" class="table-row" ng-click="openPatients(x.id)">
+            <td>{[{ x.name}]}</td>
+            <td>{[{ x.username }]}</td>
+            <td>{[{ x.email }]}</td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>

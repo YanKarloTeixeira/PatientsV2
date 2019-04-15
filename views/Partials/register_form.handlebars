@@ -1,0 +1,34 @@
+<form action="new" method="post">
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" name="name" value="{{name}}" placeholder="Enter name" required>
+    </div>
+    <div class="form-group">
+        <label for="username">User Name</label>
+        <input type="text" class="form-control" id="username" name="username" value="{{username}}" placeholder="Enter Username" required>
+    </div>
+    <div class="form-group">
+        <label for="email">Email address</label>
+        <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" value="{{email}}" placeholder="Enter email" required>
+    </div>
+    <div class="form-group">
+        <label for="age">Age</label>
+        <input type="number" class="form-control" id="age" name="age" aria-describedby="ageHelp" value="{{age}}" placeholder="Enter age" required>
+    </div>
+    <div class="form-group">
+        <label for="gender">Gender</label>
+        <select class="form-control" name="gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="pwd">Password</label>
+        <input type="password" class="form-control" id="pwd" name="password" placeholder="Password" required>
+    </div>
+    <div class="form-group">
+        <label for="pwd2">Re-Enter Password</label>
+        <input type="password" class="form-control" id="pwd2" name="password2" placeholder="Re-enter Password" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Register</button>
+</form>

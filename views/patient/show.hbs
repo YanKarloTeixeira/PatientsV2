@@ -1,0 +1,35 @@
+<div class="container"  ng-controller="patientController">
+    <div class="card-columns">
+        <div class="card" style="width:300px">
+            <div class="card-header" align="center">Actions</div>
+            <div class="card-body">
+                <a href="/patient/signs/{{patient.id}}" class="card-link">Add Vital Sign</a><br><br>
+                <a href="/patient/sign-list/{{patient.id}}" class="card-link">View Vital sign</a><br><br>
+            </div>
+        </div>
+        <div class="card offset-sm-2" style="width:500px">
+            <div class="card-header">Patient Basic detail</div>
+            <div class="card-body">
+                <div class="form-group">
+                    <h5 > Name: </h5>
+                    <label > {{patient.name}} </label>
+                </div>
+
+                <div class="form-group">
+                    <h5> Email: </h5>
+                    <label> {{patient.email}}</label>
+                </div>
+
+                <div class="form-group">
+                    <h5> Gender: </h5>
+                    <label> {{patient.gender}} </label>
+                </div>
+
+                <div class="form-group">
+                    <h5> Age: </h5>
+                    <label> {{patient.age}} </label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

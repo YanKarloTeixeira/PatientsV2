@@ -1,0 +1,30 @@
+<div class="container" ng-controller="alertController">
+
+    <h2 align="center">
+        Alert List
+    </h2>
+    <input type="text" class="form-control" placeholder="Enter Search Criteria" ng-model="search">
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Time</th>
+            <th scope="col">Subject</th>
+            <th scope="col">Blood pressure</th>
+            <th scope="col">Body Temperature</th>
+            <th scope="col">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr ng-repeat="x in alerts | orderBy : time : true | filter:search:false" class="table-row" ng-click="openPatients(x._id)">
+            <td>{[{ x.time}]}</td>
+            <td>{[{ x.subject }]}</td>
+            <td>{[{ x.blood_pressure }]}</td>
+            <td>{[{ x.body_temperature }]}</td>
+            <td>{[{ x.description }]}</td>
+        </tr>
+        </tbody>
+
+    </table>
+
+</div>

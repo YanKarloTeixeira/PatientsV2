@@ -1,0 +1,75 @@
+<div class="container" ng-controller="signController">
+
+        <div class="card offset-sm-3" style="width:500px" >
+            <div class="card-header" align="center">Sign and symptoms
+
+            </div>
+            <div class="card-body">
+                <form ng-submit="signSubmit()">
+                    <div class="form-check">
+                       <input type="checkbox" class="form-check-input"  id="fever" ng-model="fever">
+                        <label class="form-check-label" for="fever">fever</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="Diarrhea" ng-model="Diarrhea">
+                        <label class="form-check-label" for="Diarrhea">Diarrhea</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="Fatigue" ng-model="Fatigue">
+                        <label class="form-check-label" for="Fatigue">Fatigue</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="Muscle" ng-model="Muscle">
+                        <label class="form-check-label" for="Muscle">Muscle aches</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="Coughing" ng-model="Coughing">
+                        <label class="form-check-label" for="Coughing">Coughing</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="bitten" ng-model="bitten">
+                        <label class="form-check-label" for="bitten">Have been bitten by an animal</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="breathing" ng-model="breathing">
+                        <label class="form-check-label" for="breathing">Are having trouble breathing</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="coughingmore" ng-model="coughingmore">
+                        <label class="form-check-label" for="coughingmore">Have been coughing for more than a week</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="headache" ng-model="headache">
+                        <label class="form-check-label" for="headache">Have severe headache with fever</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="rash" ng-model="rash">
+                        <label class="form-check-label" for="rash">Experience a rash or swelling</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="prolonged" ng-model="prolonged">
+                        <label class="form-check-label" for="prolonged">Have unexplained or prolonged fever</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="vision" ng-model="vision">
+                        <label class="form-check-label" for="vision">Have sudden vision problems</label>
+                    </div>
+
+                    <input type="submit">
+                </form>
+            </div>
+        </div>
+        <br>
+
+</div>

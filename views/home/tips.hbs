@@ -1,0 +1,17 @@
+<div class="container"  align="center">
+    <h3>Daily Tips</h3>
+    {{#each tips}}
+    <div class="card" style="width:500px">
+        <div class="card-header" align="center">{{title}}
+            {{#equal ../user.user_type "nurse"}}
+            <a href="/delete-tip/{{id}}" class="float-right" >X</a>
+        {{/equal}}
+        </div>
+        <div class="card-body">
+           <p>{{description}}</p>
+            <small> Created At: {{createdAt}}</small>
+        </div>
+    </div>
+        <br>
+    {{/each}}
+</div>

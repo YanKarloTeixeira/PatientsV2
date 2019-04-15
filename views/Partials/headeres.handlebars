@@ -1,0 +1,99 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/">CareCenter</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+
+            <li class="nav-item active">
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+
+            {{#equal user.user_type "patient"}}
+            <li class="nav-item active">
+                <a class="nav-link" href="/patient/index">Patient <span class="sr-only">(current)</span></a>
+            </li>
+            {{/equal}}
+            {{#equal user.user_type "patient"}}
+                <li class="nav-item">
+                    <a class="nav-link" href="/video">Videos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/tips">Tips</a>
+                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/patient/symptoms">Symptoms</a>
+                </li>
+            {{/equal}}
+
+             {{#equal user.user_type "nurse"}}
+
+                 <li class="nav-item">
+                     <a class="nav-link" href="/patient">Patients</a>
+                 </li>
+
+                 <li class="nav-item">
+                     <a class="nav-link" href="/alert">Alerts</a>
+                 </li>
+
+                 <li class="nav-item dropdown">
+                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                         Video
+                     </a>
+
+                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                         <a class="dropdown-item" href="/video">View Videos</a>
+                         <a class="dropdown-item" href="/new-video">Add New Video</a>
+                     </div>
+
+                 </li>
+                 <li class="nav-item dropdown">
+                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                         Tips
+                     </a>
+
+                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                         <a class="dropdown-item" href="/tips">View Tips</a>
+                         <a class="dropdown-item" href="/new-tip">Add New Tips</a>
+                     </div>
+
+                 </li>
+             {{/equal}}
+
+            {{#unless user}}
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Nurse
+                </a>
+
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/nurse/login">Login</a>
+                    <a class="dropdown-item" href="/nurse/new">Register</a>
+                </div>
+
+            </li>
+
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Patient
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/patient/login">Login</a>
+                    <a class="dropdown-item" href="/patient/new">Register</a>
+                </div>
+            </li>
+            {{/unless}}
+        </ul>
+        <ul class="navbar-nav ml-auto">
+             {{#equal user.user_type "nurse"}}
+            <li class="nav-item"><a class="nav-link" href="/nurse/logout"><ion-icon name="person"></ion-icon> Logout</a></li>
+            {{/equal}}
+            {{#equal user.user_type "patient"}}
+                <li class="nav-item"><a class="nav-link" href="/patient/logout"><ion-icon name="person"></ion-icon> Logout</a></li>
+            {{/equal}}
+        </ul>
+    </div>
+</nav>

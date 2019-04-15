@@ -1,0 +1,9 @@
+<div class="row col-sm-10 offset-sm-1" align="center"  ng-controller="videoCtrl">
+    <div class="col-sm-6 wrapper" ng-repeat="vid in videos">
+        <a  href="#" class="float-right delete-link" ng-click="deleteVideo(vid._id)">X</a>
+        <ng-youtube-embed  video="vid.video" width="100%">
+
+        </ng-youtube-embed>
+        <label class="label-style"> {[{vid.title}]}</label>
+    </div>
+</div>

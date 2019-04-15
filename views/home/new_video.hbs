@@ -1,0 +1,19 @@
+<div class="container">
+    <h3 align="center">
+        Add New Video
+    </h3>
+
+    <form method="post" action="new-video">
+        <div class="form-group">
+            <label for="video"> Add Youtube Video URL here:</label>
+            <input type="text" class="form-control" id="video" value="{{video}}" name="video" required>
+        </div>
+
+        <div class="form-group">
+            <label for="title"> Add Title:</label>
+            <input type="text" class="form-control" id="title" value="{{title}}" name="title" required>
+        </div>
+        <input type="submit" value="add"class=" btn btn-primary">
+
+    </form>
+</div>
